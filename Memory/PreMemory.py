@@ -1,5 +1,5 @@
 import random
-from Actor_Critic_for_JSP.Memory.sum_tree import SumTree as ST
+from Memory.sum_tree import SumTree as ST
 
 
 class preMemory(object):

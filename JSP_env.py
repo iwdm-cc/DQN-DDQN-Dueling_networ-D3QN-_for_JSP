@@ -189,9 +189,9 @@ class JSP_Env:
 if __name__=="__main__":
 
     from Dataset.data_extract import change
-    from Actor_Critic_for_JSP.action_space import Dispatch_rule
+    from action_space import Dispatch_rule
     import random
-    n, m, PT, MT = change('ft', 6)
+    n, m, PT, MT = change('ft', 20)
     print(PT)
     print()
     jsp=JSP_Env(n, m, PT, MT)

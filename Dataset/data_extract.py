@@ -2,7 +2,7 @@ import pickle
 import os
 
 def change(A,B):
-    f=r'C:\Users\Administrator\PycharmProjects\MADRL_for_-two_AGVs\Actor_Critic_for_JSP\Dataset'
+    f=r'C:\Users\47306\PycharmProjects\DQN-DDQN-Dueling_networ-D3QN-_for_JSP\Dataset'
     try:                                            #为什么要这么写呢，因为la01写的01,别的写的ft6,中间没有0
         file=os.path.join(f,A,A+str(B)+'.pkl')
         with open(file,'rb') as f:

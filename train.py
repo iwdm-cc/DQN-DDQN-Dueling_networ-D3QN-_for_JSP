@@ -1,8 +1,8 @@
-from Actor_Critic_for_JSP.JSP_env import JSP_Env,Gantt
+from JSP_env import JSP_Env,Gantt
 import matplotlib.pyplot as plt
-from Actor_Critic_for_JSP.Dataset.data_extract import change
-from Actor_Critic_for_JSP.action_space import Dispatch_rule
-from Actor_Critic_for_JSP.Agent.Agent import Agent
+from Dataset.data_extract import change
+from action_space import Dispatch_rule
+from Agent.Agent import Agent
 
 def main(Agent,env,batch_size):
     Reward_total = []
@@ -10,7 +10,7 @@ def main(Agent,env,batch_size):
     rewards_list = []
     C = []
 
-    episodes = 8000
+    episodes = 200
     print("Collecting Experience....")
     for i in range(episodes):
         print(i)
@@ -19,7 +19,7 @@ def main(Agent,env,batch_size):
         while True:
 
             action = Agent.choose_action(state)
-
+            print(action,"action")
             a=Dispatch_rule(action,env)
             try:
                 next_state, reward, done = env.step(a)
@@ -40,6 +40,7 @@ def main(Agent,env,batch_size):
                 # Gantt(env.Machines)
                 break
             state = next_state
+            # print(state, "state")
     x = [_ for _ in range(len(C))]
     plt.plot(x, rewards_list)
     # plt.show()

@@ -3,9 +3,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-from Actor_Critic_for_JSP.Agent.RL_network import CNN_FNN,CNN_dueling
-from Actor_Critic_for_JSP.Memory.Memory import Memory
-from Actor_Critic_for_JSP.Memory.PreMemory import preMemory
+from Agent.RL_network import CNN_FNN,CNN_dueling
+from Memory.Memory import Memory
+from Memory.PreMemory import preMemory
 
 class Agent():
     """docstring for DQN"""
